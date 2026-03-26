@@ -125,3 +125,163 @@
     <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Linux / Windows</span></div>
   </div>
 </div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Thiago Dias Gomes — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+
+<!-- cursor customizado -->
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="curRing"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-brand">
+    <img src="https://ui-avatars.com/api/?background=4A044E&color=FDF4FF&name=Thiago+Dias+Gomes" alt="Logo TDG"/>
+    <span>Thiago Dias Gomes</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#habilidades">Habilidades</a></li>
+    <li><a href="#formacao">Formação</a></li>
+    <li><a href="#experiencia">Experiência</a></li>
+    <li><a href="#projetos">Projetos</a></li>
+    <li><a href="#ctc" class="nav-cta">Contato</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div id="particles"></div>
+  <div class="hero-grid-dots"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge"><span class="hero-dot"></span>Disponível para oportunidades</div>
+      <h1>
+        <span class="name">Olá, sou</span><br/>
+        <span class="highlight">Thiago Dias<br/>Gomes</span>
+      </h1>
+      <p class="hero-sub">Estudante de Tecnologia apaixonado por Desenvolvimento Web, IA, e experiências 3D interativas.</p>
+      <div class="hero-btns">
+        <a href="#projetos" class="btn btn-primary">Ver Projetos →</a>
+        <a href="#ctc" class="btn btn-secondary">Entre em Contato</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="avatar-frame">
+        <div class="avatar-ring"><div class="avatar-ring-inner"></div></div>
+        <div class="avatar-img">
+          <img src="https://ui-avatars.com/api/?background=4A044E&color=FDF4FF&name=Thiago+Dias+Gomes&size=256" alt="Thiago Dias Gomes"/>
+        </div>
+        <div class="avatar-glow"></div>
+        <div class="hero-cards">
+          <div class="hero-chip"><span class="hero-chip-icon">🌐</span><span> Persistência  </span></div>
+          <div class="hero-chip"><span class="hero-chip-icon">🌐</span><span>Foco </span></div>
+          <div class="hero-chip"><span class="hero-chip-icon">🌐</span><span>Dedicação</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll<div class="scroll-line"></div></div>
+</section>
+
+<!-- SOBRE -->
+<div class="s" id="sobre">
+  <span class="s-label">👤 Sobre Mim</span>
+  <h2 class="s-title">Quem sou <em>eu</em></h2>
+  <p class="s-desc">Um pouco da minha trajetória, motivações e o que me faz acordar animado pra codar</p>
+  <div class="about-grid fade">
+    <div>
+      <div class="about-text">
+        <p>Sou estudante de Analise e Desenvolvimento de Sistemas. Atualmente aprendendo em Java, desenvolvimento web moderno, interfaces 3D com Three.js e banco de dados e entre outras tecnologias.</p>
+        <p>Sempre tive grande interesse por tecnologia e programação, e desde cedo busco criar soluções para problemas reais. Atualmente, trabalho na Brasilwagen, onde estou há cerca de quatro anos. Iniciei minha trajetória como jovem aprendiz e, no ano passado, fui efetivado como desenvolvedor júnior/analista técnico.</p>
+      </div>
+      <div class="about-nums">
+        <div class="num-card"><span class="num-val">3+</span><span class="num-lbl">Projetos concluídos 🚀</span></div>
+        <div class="num-card"><span class="num-val">5+</span><span class="num-lbl">Tecnologias 🚀</span></div>
+        <div class="num-card"><span class="num-val">2+</span><span class="num-lbl">Anos estudando 🚀</span></div>
+        <div class="num-card"><span class="num-val">100%</span><span class="num-lbl">Dedicação 🚀</span></div>
+      </div>
+    </div>
+    <div class="about-img">
+      <img src="foto-perfil.jpg" alt="Thiago Dias Gomes" />
+    </div>
+  </div>
+</div>
+
+<!--  OBJETIVO -->
+<div class="obj-wrap">
+  <div class="obj-card fade">
+    <span class="s-label">🎯 Objetivo</span>
+    <h2 class="s-title">Objetivo Profissional</h2>
+    <p>Meu objetivo é sempre continuar aprendendo e melhorando minhas habilidades. Quero ser um profissional reconhecido entre os melhores por minha dedicação e compromisso.</p>
+  </div>
+</div>
+
+
+<!-- HABILIDADES -->
+<div class="s s-alt" id="habilidades">
+  <span class="s-label">⚡ Skills</span>
+  <h2 class="s-title">Minhas <em>Habilidades</em></h2>
+  <p class="s-desc">Tecnologias e competências que estudo e aplico no dia a dia</p>
+  <div class="tabs">
+    <button class="tab-btn on" onclick="showTab(this,'hard')">Hard Skills</button>
+    <button class="tab-btn" onclick="showTab(this,'soft')">Soft Skills</button>
+    <button class="tab-btn" onclick="showTab(this,'tech')">Tecnologias</button>
+  </div>
+  <div id="hard" class="skills-g">
+    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Programação em Java</span></div>
+    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">HTML, CSS, JavaScript</span></div>
+    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Banco de Dados (SQL/PL/SQL)</span></div>
+    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Git e GitHub</span></div>
+    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Estruturas de Dados</span></div>
+    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Orientação a Objetos (POO)</span></div>
+  </div>
+  <div id="soft" class="skills-g" style="display:none">
+    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Trabalho em Equipe</span></div>
+    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Comunicação Efetiva</span></div>
+    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Resolução de Problemas</span></div>
+    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Adaptabilidade</span></div>
+    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Pensamento Crítico</span></div>
+  </div>
+  <div id="tech" class="skills-g" style="display:none">
+    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Three.js / WebGL</span></div>
+    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Node.js</span></div>
+    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">MySQL </span></div>
+    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">IntelliJ IDEA / VS Code</span></div>
+    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Linux / Windows</span></div>
+  </div>
+</div>
+
+<!-- formação -->
+<div class="s" id="formacao">
+  <span class="s-label">🎓 Formação</span>
+  <h2 class="s-title">Minha <em>Formação</em></h2>
+  <p class="s-desc">Educação e cursos que moldaram minha visão técnica</p>
+  <div class="tl">
+    <div class="tl-item fade">
+      <div class="tl-date">2026 — Atual</div>
+      <div class="tl-body">
+        <div class="tl-where">Graduação · Presencial</div>
+        <div class="tl-what">Tecnólogo em Análise e Desenvolvimento de Sistemas</div>
+        <div class="tl-who">FIAP - Aclimação · São Paulo, SP</div>
+        <div class="tl-desc">Disciplinas de programação Artificial Intelligence & Chatbot, Building Relational Database, Computational Thinking Using Python, Domain Driven Design using Java, Front-end Design Engineering, Software Engineering and Business Model.</div>
+      </div>
+    </div>
+    <div class="tl-item fade">
+      <div class="tl-date">2024/2025</div>
+      <div class="tl-body">
+        <div class="tl-where">Curso · Online</div>
+        <div class="tl-what">Diversos cursos</div>
+        <div class="tl-who">Plataforma Online</div>
+        <div class="tl-desc">HTML5, CSS3, JavaScript e Three.js, Banco de Dados, SQL, Python, Básico de java entre outros.</div>
+      </div>
+    </div>
