@@ -1,0 +1,72 @@
+/*
+  formacao.css
+  Estilos da timeline de Formação e Experiência.
+*/
+
+.tl {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.tl-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.tl-date {
+  text-align: right;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--color-primary);
+  padding-top: 0.3rem;
+  white-space: nowrap;
+}
+
+.tl-body {
+  background: var(--color-bg);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: clamp(1rem, 2vw, 1.4rem);
+}
+
+.tl-where {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+}
+
+.tl-what {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+.tl-who {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.tl-desc {
+  font-size: var(--font-size-xs);
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+/* ── Responsividade ── */
+@media (max-width: 640px) {
+  .tl-item {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .tl-date {
+    text-align: left;
+  }
+}

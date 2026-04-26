@@ -1,0 +1,51 @@
+/*
+  variables.css
+  Todas as variáveis CSS do projeto: cores, fontes, espaçamentos, radii e breakpoints.
+  Centralizadas aqui para facilitar manutenção e consistência visual.
+*/
+
+:root {
+  /* ── Cores Principais ── */
+  --color-primary:    #4A044E;
+  --color-secondary:  #22C55E;
+  --color-bg:         #FDF4FF;
+  --color-text:       #2E1065;
+  --color-accent:     #60A5FA;
+  --color-muted:      #7C5C82;
+
+  /* ── Fontes ── */
+  --font-body:    'Inter', sans-serif;
+  --font-size-xs: clamp(0.72rem, 0.65rem + 0.2vw, 0.8rem);
+  --font-size-sm: clamp(0.82rem, 0.75rem + 0.3vw, 0.95rem);
+  --font-size-base: clamp(0.9rem, 0.85rem + 0.25vw, 1rem);
+  --font-size-lg:  clamp(1rem, 0.9rem + 0.5vw, 1.15rem);
+  --font-size-xl:  clamp(1.8rem, 1.2rem + 2vw, 2.6rem);
+  --font-size-hero: clamp(2.2rem, 1rem + 4vw, 4rem);
+
+  /* ── Espaçamentos ── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* ── Bordas e Sombras ── */
+  --radius-sm: 6px;
+  --radius:    8px;
+  --radius-lg: 12px;
+  --radius-full: 999px;
+  --shadow-sm: 0 1px 3px rgba(74,4,78,0.08);
+  --shadow-md: 0 4px 16px rgba(74,4,78,0.12);
+
+  /* ── Larguras de Conteúdo ── */
+  --content-default: 1200px;
+  --content-narrow:  860px;
+
+  /* ── Transições ── */
+  --transition: 200ms ease;
+}

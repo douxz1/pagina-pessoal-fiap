@@ -1,0 +1,58 @@
+/*
+  projetos.css
+  Estilos dos cards de projetos.
+*/
+
+.proj-g {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  gap: var(--space-6);
+}
+
+.proj {
+  background: var(--color-bg);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.proj:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.proj-cover {
+  background: var(--color-primary);
+  padding: clamp(1.2rem, 3vw, 2rem);
+}
+
+.proj-ico {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: var(--space-3);
+}
+
+.proj-cover h3 {
+  color: var(--color-bg);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.proj-body {
+  padding: clamp(1rem, 3vw, 1.8rem);
+}
+
+.proj-body p {
+  font-size: var(--font-size-xs);
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  .proj-g {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,79 @@
+/*
+  footer.css
+  Estilos do rodapé da página.
+*/
+
+footer {
+  background: var(--color-primary);
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.25rem, 4vw, 4rem);
+}
+
+.footer-inner {
+  max-width: var(--content-default);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.footer-brand img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid var(--color-secondary);
+}
+
+.footer-brand span {
+  color: var(--color-bg);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--color-bg);
+  font-size: var(--font-size-xs);
+  opacity: 0.85;
+  transition: opacity var(--transition);
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}
+
+.footer-copy {
+  color: var(--color-bg);
+  font-size: var(--font-size-xs);
+  opacity: 0.7;
+}
+
+.footer-copy span {
+  color: var(--color-secondary);
+  opacity: 1;
+}
+
+/* ── Responsividade ── */
+@media (max-width: 640px) {
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
