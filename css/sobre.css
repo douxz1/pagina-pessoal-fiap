@@ -1,0 +1,120 @@
+/*
+  sobre.css
+  Estilos da seção Sobre Mim e Objetivo Profissional.
+*/
+
+/* ── Sobre ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr min(380px, 40%);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.about-text p {
+  font-size: var(--font-size-sm);
+  line-height: 1.8;
+  margin-bottom: var(--space-4);
+  color: var(--color-text);
+}
+
+.about-nums {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.num-card {
+  background: var(--color-bg);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius);
+  padding: var(--space-5);
+  text-align: center;
+  transition: box-shadow var(--transition);
+}
+
+.num-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.num-val {
+  display: block;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.num-lbl {
+  font-size: var(--font-size-xs);
+  color: var(--color-text);
+  margin-top: var(--space-1);
+}
+
+.about-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-primary);
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* ── Objetivo ── */
+.obj-wrap {
+  max-width: var(--content-default);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 4rem) clamp(2.5rem, 5vw, 5rem);
+}
+
+.obj-card {
+  background: var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.obj-card .s-label {
+  background: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.obj-card .s-title {
+  color: var(--color-bg);
+  margin-bottom: var(--space-4);
+}
+
+.obj-card p {
+  color: var(--color-bg);
+  font-size: var(--font-size-sm);
+  line-height: 1.8;
+  max-width: 740px;
+  opacity: 0.95;
+}
+
+/* ── Responsividade ── */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-img {
+    aspect-ratio: 16 / 9;
+    max-height: 260px;
+  }
+
+  .about-nums {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-nums {
+    grid-template-columns: 1fr 1fr;
+  }
+}

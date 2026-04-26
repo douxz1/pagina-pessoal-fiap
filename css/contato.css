@@ -1,0 +1,153 @@
+/*
+  contato.css
+  Estilos da seção de Contato: links sociais e formulário.
+*/
+
+#ctc {
+  background: var(--color-bg);
+  padding: clamp(3rem, 6vw, 6rem) clamp(1.25rem, 4vw, 4rem);
+}
+
+.ctc-inner {
+  max-width: var(--content-narrow);
+  margin: 0 auto;
+}
+
+.ctc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.ctc-left h3,
+.form-wrap h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-5);
+}
+
+/* ── Links Sociais ── */
+.soc-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  background: var(--color-bg);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  margin-bottom: 0.75rem;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.soc-link:hover {
+  box-shadow: var(--shadow-sm);
+  transform: translateX(3px);
+}
+
+.soc-ico {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--color-bg);
+  background: var(--color-primary);
+}
+
+.soc-info strong {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.soc-info span {
+  font-size: var(--font-size-xs);
+  color: var(--color-muted);
+  word-break: break-all;
+}
+
+/* ── Formulário ── */
+.form-wrap {
+  background: var(--color-bg);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.form-row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.fg {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.fg label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.fg input,
+.fg textarea {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  outline: none;
+  transition: border-color var(--transition);
+  min-height: 44px;
+}
+
+.fg input:focus,
+.fg textarea:focus {
+  border-color: var(--color-accent);
+}
+
+.fg textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-send {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--color-primary);
+  color: var(--color-bg);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  min-height: 44px;
+  cursor: pointer;
+  transition: opacity var(--transition);
+}
+
+.btn-send:hover {
+  opacity: 0.85;
+}
+
+/* ── Responsividade ── */
+@media (max-width: 768px) {
+  .ctc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row2 {
+    grid-template-columns: 1fr;
+  }
+}
