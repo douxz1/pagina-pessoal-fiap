@@ -19,15 +19,21 @@
     <img src="https://ui-avatars.com/api/?background=4A044E&color=FDF4FF&name=Thiago+Dias+Gomes" alt="Logo TDG"/>
     <span>Thiago Dias Gomes</span>
   </a>
-  <ul class="nav-links">
+  <!-- Hambúrguer (visível apenas no mobile) -->
+  <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-links" id="nav-menu" role="list">
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#habilidades">Habilidades</a></li>
     <li><a href="#formacao">Formação</a></li>
     <li><a href="#experiencia">Experiência</a></li>
     <li><a href="#projetos">Projetos</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#ctc" class="nav-cta">Contato</a></li>
   </ul>
-  <!-- hamburguer criado via JS -->
 </nav>
 
 <!-- HERO -->
@@ -57,8 +63,8 @@
         <div class="avatar-glow"></div>
         <div class="hero-cards">
           <div class="hero-chip"><span class="hero-chip-icon">🌐</span><span>Persistência</span></div>
-          <div class="hero-chip"><span class="hero-chip-icon">🌐</span><span>Foco</span></div>
-          <div class="hero-chip"><span class="hero-chip-icon">🌐</span><span>Dedicação</span></div>
+          <div class="hero-chip"><span class="hero-chip-icon">🔥</span><span>Foco</span></div>
+          <div class="hero-chip"><span class="hero-chip-icon">💎</span><span>Dedicação</span></div>
         </div>
       </div>
     </div>
@@ -74,7 +80,7 @@
   <div class="about-grid fade">
     <div>
       <div class="about-text">
-        <p>Sou estudante de Analise e Desenvolvimento de Sistemas. Atualmente aprendendo em Java, desenvolvimento web moderno, interfaces 3D com Three.js e banco de dados e entre outras tecnologias.</p>
+        <p>Sou estudante de Análise e Desenvolvimento de Sistemas. Atualmente aprendendo Java, desenvolvimento web moderno, interfaces 3D com Three.js, banco de dados e entre outras tecnologias.</p>
         <p>Sempre tive grande interesse por tecnologia e programação, e desde cedo busco criar soluções para problemas reais. Atualmente, trabalho na Brasilwagen, onde estou há cerca de quatro anos. Iniciei minha trajetória como jovem aprendiz e, no ano passado, fui efetivado como desenvolvedor júnior/analista técnico.</p>
       </div>
       <div class="about-nums">
@@ -85,7 +91,7 @@
       </div>
     </div>
     <div class="about-img">
-      <img src="foto-perfil.jpg" alt="Thiago Dias Gomes" />
+      <img src="foto-perfil.jpg" alt="Thiago Dias Gomes" loading="lazy"/>
     </div>
   </div>
 </div>
@@ -145,13 +151,13 @@
         <div class="tl-where">Graduação · Presencial</div>
         <div class="tl-what">Tecnólogo em Análise e Desenvolvimento de Sistemas</div>
         <div class="tl-who">FIAP - Aclimação · São Paulo, SP</div>
-        <div class="tl-desc">Disciplinas de programação Artificial Intelligence &amp; Chatbot, Building Relational Database, Computational Thinking Using Python, Domain Driven Design using Java, Front-end Design Engineering, Software Engineering and Business Model.</div>
+        <div class="tl-desc">Disciplinas de programação: Artificial Intelligence & Chatbot, Building Relational Database, Computational Thinking Using Python, Domain Driven Design using Java, Front-end Design Engineering, Software Engineering and Business Model.</div>
       </div>
     </div>
     <div class="tl-item fade">
       <div class="tl-date">2024/2025</div>
       <div class="tl-body">
-        <div class="tl-where">Curso · Online</div>
+        <div class="tl-where">Cursos · Online</div>
         <div class="tl-what">Diversos cursos</div>
         <div class="tl-who">Plataforma Online</div>
         <div class="tl-desc">HTML5, CSS3, JavaScript e Three.js, Banco de Dados, SQL, Python, Básico de Java entre outros.</div>
@@ -170,61 +176,10 @@
       <div class="tl-date">2026 — Atual</div>
       <div class="tl-body">
         <div class="tl-where">Presencial</div>
-        <div class="tl-what">Desenvolvedor Junior</div>
+        <div class="tl-what">Desenvolvedor Júnior</div>
         <div class="tl-who">Brasilwagen · São Paulo, SP</div>
       </div>
     </div>
-  </div>
-</div>
-
-<!-- ACCORDION — FAQ ──────────────────────────────────────── -->
-<div class="s" id="faq">
-  <span class="s-label">❓ FAQ</span>
-  <h2 class="s-title">Perguntas <em>Frequentes</em></h2>
-  <p class="s-desc">Dúvidas sobre mim e meu trabalho</p>
-
-  <div class="accordion">
-
-    <div class="accordion-item">
-      <button class="accordion-trigger">
-        <span>Você está disponível para freela?</span>
-        <span class="accordion-icon">＋</span>
-      </button>
-      <div class="accordion-content">
-        <p>Sim! Estou aberto a projetos freelance, especialmente em desenvolvimento web front-end, landing pages e interfaces interativas. Entre em contato pelo formulário abaixo.</p>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <button class="accordion-trigger">
-        <span>Quais tecnologias você domina melhor?</span>
-        <span class="accordion-icon">＋</span>
-      </button>
-      <div class="accordion-content">
-        <p>HTML, CSS e JavaScript são meu core. Também trabalho com Java (POO), SQL/PL-SQL para banco de dados e estou aprendendo Three.js para experiências 3D na web.</p>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <button class="accordion-trigger">
-        <span>Você aceita trabalho remoto?</span>
-        <span class="accordion-icon">＋</span>
-      </button>
-      <div class="accordion-content">
-        <p>Com certeza! Remoto ou híbrido são meus formatos preferidos. Tenho toda a infraestrutura necessária para trabalhar à distância com produtividade.</p>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <button class="accordion-trigger">
-        <span>Como posso entrar em contato?</span>
-        <span class="accordion-icon">＋</span>
-      </button>
-      <div class="accordion-content">
-        <p>Pelo formulário de contato logo abaixo, pelo e-mail thiagodiazgomes@email.com ou diretamente no LinkedIn. Respondo rápido! 🚀</p>
-      </div>
-    </div>
-
   </div>
 </div>
 
@@ -251,7 +206,52 @@
       </div>
       <div class="proj-body">
         <p>Automação para cadastros de usuários dentro do sistema.</p>
-        <div class="tags"><span class="tag">pyautogui</span><span class="tag">time</span><span class="tag">re</span><span class="tag">PYTHON</span></div>
+        <div class="tags"><span class="tag">pyautogui</span><span class="tag">time</span><span class="tag">re</span><span class="tag">Python</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ — ACCORDION -->
+<div class="s s-alt" id="faq">
+  <span class="s-label">❓ FAQ</span>
+  <h2 class="s-title">Perguntas <em>Frequentes</em></h2>
+  <p class="s-desc">Curiosidades e respostas sobre minha carreira e estudos</p>
+  <div class="accordion fade">
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        Qual linguagem você mais usa no dia a dia?
+        <span class="accordion-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="accordion-content">
+        <p>Atualmente uso muito Java no back-end e JavaScript/HTML/CSS no front-end. Para automações, recorro ao Python. Cada linguagem tem o seu espaço certo na stack!</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        Você aceita freelances ou projetos colaborativos?
+        <span class="accordion-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="accordion-content">
+        <p>Sim! Estou aberto a projetos interessantes, especialmente os que envolvam web, automação ou algo inovador com IA. Me manda uma mensagem pelo formulário de contato.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        Onde você estuda atualmente?
+        <span class="accordion-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="accordion-content">
+        <p>Curso Tecnólogo em Análise e Desenvolvimento de Sistemas na FIAP - Aclimação, São Paulo. O curso abrange desde Java e Python até Banco de Dados e Inteligência Artificial.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        Quais são seus objetivos para os próximos anos?
+        <span class="accordion-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="accordion-content">
+        <p>Quero me tornar um desenvolvedor full-stack sólido, aprofundar meus conhecimentos em IA e criar produtos próprios. O caminho é longo, mas a dedicação é 100%!</p>
       </div>
     </div>
   </div>
@@ -287,11 +287,11 @@
         <h3>Enviar mensagem</h3>
         <form onsubmit="return false;">
           <div class="form-row2">
-            <div class="fg"><label>Nome</label><input type="text" placeholder="Thiago Dias Gomes"/></div>
-            <div class="fg"><label>E-mail</label><input type="email" placeholder="thiagodiazgomes@email.com"/></div>
+            <div class="fg"><label for="nome">Nome</label><input id="nome" type="text" placeholder="Thiago Dias Gomes"/></div>
+            <div class="fg"><label for="email">E-mail</label><input id="email" type="email" placeholder="thiagodiazgomes@email.com"/></div>
           </div>
-          <div class="fg"><label>Assunto</label><input type="text" placeholder="Sobre o que você quer falar?"/></div>
-          <div class="fg"><label>Mensagem</label><textarea placeholder="Escreva sua mensagem..."></textarea></div>
+          <div class="fg"><label for="assunto">Assunto</label><input id="assunto" type="text" placeholder="Sobre o que você quer falar?"/></div>
+          <div class="fg"><label for="mensagem">Mensagem</label><textarea id="mensagem" placeholder="Escreva sua mensagem..."></textarea></div>
           <button class="btn-send">Enviar Mensagem ✉️</button>
         </form>
       </div>
@@ -316,6 +316,14 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<!-- BOTÃO VOLTAR AO TOPO -->
+<button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+
+<!-- SCRIPTS -->
+<script src="script.js" defer></script>
 </body>
 </html>
