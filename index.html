@@ -1,131 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thiago Dias Gomes - Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<!-- NAV -->
-<nav>
-  <a href="#home" class="nav-brand">
-    <img src="https://ui-avatars.com/api/?background=4A044E&color=FDF4FF&name=Thiago+Dias+Gomes" alt="Logo TDG"/>
-    <span>Thiago Dias Gomes</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#habilidades">Habilidades</a></li>
-    <li><a href="#formacao">Formação</a></li>
-    <li><a href="#experiencia">Experiência</a></li>
-    <li><a href="#projetos">Projetos</a></li>
-    <li><a href="#ctc" class="nav-cta">Contato</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<section id="home">
-  <div class="hero-bg"></div>
-  <div id="particles"></div>
-  <div class="hero-grid-dots"></div>
-  <div class="hero-inner">
-    <div class="hero-left">
-      <div class="hero-badge"><span class="hero-dot"></span>Disponível para oportunidades</div>
-      <h1>
-        <span class="name">Olá, sou</span><br/>
-        <span class="highlight">Thiago Dias<br/>Gomes</span>
-      </h1>
-      <p class="hero-sub">Estudante de Tecnologia apaixonado por Desenvolvimento Web, IA, e experiências 3D interativas.</p>
-      <div class="hero-btns">
-        <a href="#projetos" class="btn btn-primary">Ver Projetos →</a>
-        <a href="#ctc" class="btn btn-secondary">Entre em Contato</a>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="avatar-frame">
-        <div class="avatar-ring"><div class="avatar-ring-inner"></div></div>
-        <div class="avatar-img">
-          <img src="https://ui-avatars.com/api/?background=4A044E&color=FDF4FF&name=Thiago+Dias+Gomes&size=256" alt="Thiago Dias Gomes"/>
-        </div>
-        <div class="avatar-glow"></div>
-        <div class="hero-cards">
-          <div class="hero-chip"><span class="hero-chip-icon">🌐</span><span> Persistência  </span></div>
-          <div class="hero-chip"><span class="hero-chip-icon">🌐</span><span>Foco </span></div>
-          <div class="hero-chip"><span class="hero-chip-icon">🌐</span><span>Dedicação</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="hero-scroll">Scroll<div class="scroll-line"></div></div>
-</section>
-<!-- SOBRE -->
-<div class="s" id="sobre">
-  <span class="s-label">👤 Sobre Mim</span>
-  <h2 class="s-title">Quem sou <em>eu</em></h2>
-  <p class="s-desc">Um pouco da minha trajetória, motivações e o que me faz acordar animado pra codar</p>
-  <div class="about-grid fade">
-    <div>
-      <div class="about-text">
-        <p>Sou estudante de Analise e Desenvolvimento de Sistemas. Atualmente aprendendo em Java, desenvolvimento web moderno, interfaces 3D com Three.js e banco de dados e entre outras tecnologias.</p>
-        <p>Sempre tive grande interesse por tecnologia e programação, e desde cedo busco criar soluções para problemas reais. Atualmente, trabalho na Brasilwagen, onde estou há cerca de quatro anos. Iniciei minha trajetória como jovem aprendiz e, no ano passado, fui efetivado como desenvolvedor júnior/analista técnico.</p>
-    </div>
-    <div class="about-nums">
-        <div class="num-card"><span class="num-val">3+</span><span class="num-lbl">Projetos concluídos 🚀</span></div>
-        <div class="num-card"><span class="num-val">5+</span><span class="num-lbl">Tecnologias 🚀</span></div>
-        <div class="num-card"><span class="num-val">2+</span><span class="num-lbl">Anos estudando 🚀</span></div>
-        <div class="num-card"><span class="num-val">100%</span><span class="num-lbl">Dedicação 🚀</span></div>
-      </div>
-    </div>
-    <div class="about-img">
-      <img src="foto-perfil.jpg" alt="Thiago Dias Gomes" />
-    </div>
-  </div>
-</div>
-
-  <!--  OBJETIVO -->
-<div class="obj-wrap">
-  <div class="obj-card fade">
-    <span class="s-label">🎯 Objetivo</span>
-    <h2 class="s-title">Objetivo Profissional</h2>
-    <p>Meu objetivo é sempre continuar aprendendo e melhorando minhas habilidades. Quero ser um profissional reconhecido entre os melhores por minha dedicação e compromisso.</p>
-  </div>
-</div>
-  <!-- HABILIDADES -->
-<div class="s s-alt" id="habilidades">
-  <span class="s-label">⚡ Skills</span>
-  <h2 class="s-title">Minhas <em>Habilidades</em></h2>
-  <p class="s-desc">Tecnologias e competências que estudo e aplico no dia a dia</p>
-  <div class="tabs">
-    <button class="tab-btn on" onclick="showTab(this,'hard')">Hard Skills</button>
-    <button class="tab-btn" onclick="showTab(this,'soft')">Soft Skills</button>
-    <button class="tab-btn" onclick="showTab(this,'tech')">Tecnologias</button>
-  </div>
-  <div id="hard" class="skills-g">
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Programação em Java</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">HTML, CSS, JavaScript</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Banco de Dados (SQL/PL/SQL)</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Git e GitHub</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Estruturas de Dados</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Orientação a Objetos (POO)</span></div>
-  </div>
-     <div id="soft" class="skills-g" style="display:none">
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Trabalho em Equipe</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Comunicação Efetiva</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Resolução de Problemas</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Adaptabilidade</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Pensamento Crítico</span></div>
-  </div>
-  <div id="tech" class="skills-g" style="display:none">
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Three.js / WebGL</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Node.js</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">MySQL </span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">IntelliJ IDEA / VS Code</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Linux / Windows</span></div>
-  </div>
-</div>
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8"/>
@@ -133,13 +6,80 @@
 <title>Thiago Dias Gomes — Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
+<style>
+/* ---- FORM VALIDATION STYLES ---- */
+.input-error {
+  border: 1.5px solid #e05c5c !important;
+  box-shadow: 0 0 0 2px rgba(224,92,92,0.15);
+}
+.err-msg {
+  display: none;
+  color: #e05c5c;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* ---- MODAL ---- */
+#success-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+#success-modal.show {
+  display: flex;
+}
+.modal-box {
+  background: #1a0d2e;
+  border: 1px solid rgba(167,139,250,0.3);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  animation: modalIn 0.3s ease;
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(-20px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.modal-icon { font-size: 3rem; margin-bottom: 0.75rem; }
+.modal-box h3 { color: #c084fc; font-size: 1.4rem; margin-bottom: 0.5rem; }
+.modal-box p  { color: #ccc; font-size: 0.95rem; margin-bottom: 1.5rem; }
+#modal-close {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #fff;
+  border: none;
+  padding: 0.65rem 2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+#modal-close:hover { opacity: 0.85; }
+</style>
 </head>
 <body>
-
 
 <!-- cursor customizado -->
 <div class="cursor" id="cur"></div>
 <div class="cursor-ring" id="curRing"></div>
+
+<!-- MODAL DE SUCESSO -->
+<div id="success-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <div class="modal-icon">✅</div>
+    <h3 id="modal-title">Mensagem enviada!</h3>
+    <p>Obrigado pelo contato. Responderei em breve.</p>
+    <button id="modal-close">Fechar</button>
+  </div>
+</div>
 
 <!-- NAV -->
 <nav>
@@ -226,7 +166,6 @@
   </div>
 </div>
 
-
 <!-- HABILIDADES -->
 <div class="s s-alt" id="habilidades">
   <span class="s-label">⚡ Skills</span>
@@ -285,6 +224,9 @@
         <div class="tl-desc">HTML5, CSS3, JavaScript e Three.js, Banco de Dados, SQL, Python, Básico de java entre outros.</div>
       </div>
     </div>
+  </div>
+</div>
+
 <!--EXPERIÊNCIA-->
 <div class="s s-alt" id="experiencia">
   <span class="s-label">💼 Experiência</span>
@@ -294,18 +236,19 @@
     <div class="tl-item fade">
       <div class="tl-date">2026 — Atual</div>
       <div class="tl-body">
-        <div class="tl-where">Prensencial · </div>
-        <div class="tl-what">Desenvolverdor Junior </div>
+        <div class="tl-where">Presencial</div>
+        <div class="tl-what">Desenvolvedor Junior</div>
         <div class="tl-who">Brasilwagen · São Paulo, SP</div>
       </div>
     </div>
   </div>
 </div>
+
 <!--PROJETOS -->
 <div class="s" id="projetos">
   <span class="s-label">🚀 Projetos</span>
   <h2 class="s-title">Projetos em <em>Destaque</em></h2>
-  <p class="s-desc">O que já construí — com muita dedicação dedicação</p>
+  <p class="s-desc">O que já construí — com muita dedicação</p>
   <div class="proj-g">
     <div class="proj fade">
       <div class="proj-cover">
@@ -327,10 +270,9 @@
         <div class="tags"><span class="tag">pyautogui</span><span class="tag">time</span><span class="tag">re</span><span class="tag">PYTHON</span></div>
       </div>
     </div>
-      </div>
-    </div>
   </div>
 </div>
+
 <!-- CONTATO -->
 <section id="ctc">
   <div class="ctc-inner">
@@ -340,39 +282,57 @@
     <div class="ctc-grid fade">
       <div class="ctc-left">
         <h3>Me encontre em:</h3>
-        <a href="mailto:thiago@email.com" class="soc-link">
+        <a href="mailto:thiagodiazgomes@email.com" class="soc-link">
           <div class="soc-ico soc-em">✉</div>
           <div class="soc-info"><strong>E-mail</strong><span>thiagodiazgomes@email.com</span></div>
         </a>
-        <a href="#" class="soc-link">
+        <a href="https://github.com/douxz1" target="_blank" rel="noopener noreferrer" class="soc-link">
           <div class="soc-ico soc-gh">GH</div>
-          <div class="soc-info"><strong>GitHub</strong><span>https://github.com/douxz1</span></div>
+          <div class="soc-info"><strong>GitHub</strong><span>github.com/douxz1</span></div>
         </a>
-        <a href="#" class="soc-link">
+        <a href="https://www.linkedin.com/in/thiago-dias-a53429315/" target="_blank" rel="noopener noreferrer" class="soc-link">
           <div class="soc-ico soc-li">in</div>
-          <div class="soc-info"><strong>LinkedIn</strong><span>https://www.linkedin.com/in/thiago-dias-a53429315/</span></div>
+          <div class="soc-info"><strong>LinkedIn</strong><span>linkedin.com/in/thiago-dias</span></div>
         </a>
-        <a href="#" class="soc-link">
+        <a href="https://instagram.com/thgxdz" target="_blank" rel="noopener noreferrer" class="soc-link">
           <div class="soc-ico soc-ig">ig</div>
           <div class="soc-info"><strong>Instagram</strong><span>@thgxdz</span></div>
         </a>
       </div>
+
+      <!-- FORMULÁRIO COM VALIDAÇÃO JS -->
       <div class="form-wrap">
         <h3>Enviar mensagem</h3>
-        <form onsubmit="return false;">
+        <form id="contact-form" novalidate>
           <div class="form-row2">
-            <div class="fg"><label>Nome</label><input type="text" placeholder="Thiago Dias Gomes"/></div>
-            <div class="fg"><label>E-mail</label><input type="email" placeholder="thiagodiazgomes@email.com"/></div>
+            <div class="fg">
+              <label for="field-nome">Nome</label>
+              <input id="field-nome" type="text" placeholder="Thiago Dias Gomes" autocomplete="name"/>
+              <span class="err-msg" id="err-nome"></span>
+            </div>
+            <div class="fg">
+              <label for="field-email">E-mail</label>
+              <input id="field-email" type="email" placeholder="thiagodiazgomes@email.com" autocomplete="email"/>
+              <span class="err-msg" id="err-email"></span>
+            </div>
           </div>
-          <div class="fg"><label>Assunto</label><input type="text" placeholder="Sobre o que você quer falar?"/></div>
-          <div class="fg"><label>Mensagem</label><textarea placeholder="Escreva sua mensagem..."></textarea></div>
-          <button class="btn-send">Enviar Mensagem ✉️</button>
+          <div class="fg">
+            <label for="field-assunto">Assunto</label>
+            <input id="field-assunto" type="text" placeholder="Sobre o que você quer falar?"/>
+          </div>
+          <div class="fg">
+            <label for="field-mensagem">Mensagem</label>
+            <textarea id="field-mensagem" placeholder="Escreva sua mensagem..."></textarea>
+            <span class="err-msg" id="err-mensagem"></span>
+          </div>
+          <button type="submit" class="btn-send">Enviar Mensagem ✉️</button>
         </form>
       </div>
     </div>
   </div>
 </section>
-  <!--FOOTER-->
+
+<!--FOOTER-->
 <footer>
   <div class="footer-inner">
     <a href="#home" class="footer-brand">
@@ -389,8 +349,6 @@
   </div>
 </footer>
 
-<!-- conector -->
 <script src="script.js"></script>
 </body>
 </html>
-
