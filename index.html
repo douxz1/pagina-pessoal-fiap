@@ -1,131 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thiago Dias Gomes - Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<!-- NAV -->
-<nav>
-  <a href="#home" class="nav-brand">
-    <img src="https://ui-avatars.com/api/?background=4A044E&color=FDF4FF&name=Thiago+Dias+Gomes" alt="Logo TDG"/>
-    <span>Thiago Dias Gomes</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#habilidades">Habilidades</a></li>
-    <li><a href="#formacao">Formação</a></li>
-    <li><a href="#experiencia">Experiência</a></li>
-    <li><a href="#projetos">Projetos</a></li>
-    <li><a href="#ctc" class="nav-cta">Contato</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<section id="home">
-  <div class="hero-bg"></div>
-  <div id="particles"></div>
-  <div class="hero-grid-dots"></div>
-  <div class="hero-inner">
-    <div class="hero-left">
-      <div class="hero-badge"><span class="hero-dot"></span>Disponível para oportunidades</div>
-      <h1>
-        <span class="name">Olá, sou</span><br/>
-        <span class="highlight">Thiago Dias<br/>Gomes</span>
-      </h1>
-      <p class="hero-sub">Estudante de Tecnologia apaixonado por Desenvolvimento Web, IA, e experiências 3D interativas.</p>
-      <div class="hero-btns">
-        <a href="#projetos" class="btn btn-primary">Ver Projetos →</a>
-        <a href="#ctc" class="btn btn-secondary">Entre em Contato</a>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="avatar-frame">
-        <div class="avatar-ring"><div class="avatar-ring-inner"></div></div>
-        <div class="avatar-img">
-          <img src="https://ui-avatars.com/api/?background=4A044E&color=FDF4FF&name=Thiago+Dias+Gomes&size=256" alt="Thiago Dias Gomes"/>
-        </div>
-        <div class="avatar-glow"></div>
-        <div class="hero-cards">
-          <div class="hero-chip"><span class="hero-chip-icon">🌐</span><span> Persistência  </span></div>
-          <div class="hero-chip"><span class="hero-chip-icon">🌐</span><span>Foco </span></div>
-          <div class="hero-chip"><span class="hero-chip-icon">🌐</span><span>Dedicação</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="hero-scroll">Scroll<div class="scroll-line"></div></div>
-</section>
-<!-- SOBRE -->
-<div class="s" id="sobre">
-  <span class="s-label">👤 Sobre Mim</span>
-  <h2 class="s-title">Quem sou <em>eu</em></h2>
-  <p class="s-desc">Um pouco da minha trajetória, motivações e o que me faz acordar animado pra codar</p>
-  <div class="about-grid fade">
-    <div>
-      <div class="about-text">
-        <p>Sou estudante de Analise e Desenvolvimento de Sistemas. Atualmente aprendendo em Java, desenvolvimento web moderno, interfaces 3D com Three.js e banco de dados e entre outras tecnologias.</p>
-        <p>Sempre tive grande interesse por tecnologia e programação, e desde cedo busco criar soluções para problemas reais. Atualmente, trabalho na Brasilwagen, onde estou há cerca de quatro anos. Iniciei minha trajetória como jovem aprendiz e, no ano passado, fui efetivado como desenvolvedor júnior/analista técnico.</p>
-    </div>
-    <div class="about-nums">
-        <div class="num-card"><span class="num-val">3+</span><span class="num-lbl">Projetos concluídos 🚀</span></div>
-        <div class="num-card"><span class="num-val">5+</span><span class="num-lbl">Tecnologias 🚀</span></div>
-        <div class="num-card"><span class="num-val">2+</span><span class="num-lbl">Anos estudando 🚀</span></div>
-        <div class="num-card"><span class="num-val">100%</span><span class="num-lbl">Dedicação 🚀</span></div>
-      </div>
-    </div>
-    <div class="about-img">
-      <img src="foto-perfil.jpg" alt="Thiago Dias Gomes" />
-    </div>
-  </div>
-</div>
-
-  <!--  OBJETIVO -->
-<div class="obj-wrap">
-  <div class="obj-card fade">
-    <span class="s-label">🎯 Objetivo</span>
-    <h2 class="s-title">Objetivo Profissional</h2>
-    <p>Meu objetivo é sempre continuar aprendendo e melhorando minhas habilidades. Quero ser um profissional reconhecido entre os melhores por minha dedicação e compromisso.</p>
-  </div>
-</div>
-  <!-- HABILIDADES -->
-<div class="s s-alt" id="habilidades">
-  <span class="s-label">⚡ Skills</span>
-  <h2 class="s-title">Minhas <em>Habilidades</em></h2>
-  <p class="s-desc">Tecnologias e competências que estudo e aplico no dia a dia</p>
-  <div class="tabs">
-    <button class="tab-btn on" onclick="showTab(this,'hard')">Hard Skills</button>
-    <button class="tab-btn" onclick="showTab(this,'soft')">Soft Skills</button>
-    <button class="tab-btn" onclick="showTab(this,'tech')">Tecnologias</button>
-  </div>
-  <div id="hard" class="skills-g">
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Programação em Java</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">HTML, CSS, JavaScript</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Banco de Dados (SQL/PL/SQL)</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Git e GitHub</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Estruturas de Dados</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Orientação a Objetos (POO)</span></div>
-  </div>
-     <div id="soft" class="skills-g" style="display:none">
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Trabalho em Equipe</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Comunicação Efetiva</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Resolução de Problemas</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Adaptabilidade</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Pensamento Crítico</span></div>
-  </div>
-  <div id="tech" class="skills-g" style="display:none">
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Three.js / WebGL</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Node.js</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">MySQL </span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">IntelliJ IDEA / VS Code</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Linux / Windows</span></div>
-  </div>
-</div>
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8"/>
@@ -135,7 +8,6 @@
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
 
 <!-- cursor customizado -->
 <div class="cursor" id="cur"></div>
@@ -226,7 +98,6 @@
   </div>
 </div>
 
-
 <!-- HABILIDADES -->
 <div class="s s-alt" id="habilidades">
   <span class="s-label">⚡ Skills</span>
@@ -261,7 +132,7 @@
   </div>
 </div>
 
-<!-- formação -->
+<!-- FORMAÇÃO -->
 <div class="s" id="formacao">
   <span class="s-label">🎓 Formação</span>
   <h2 class="s-title">Minha <em>Formação</em></h2>
@@ -273,7 +144,7 @@
         <div class="tl-where">Graduação · Presencial</div>
         <div class="tl-what">Tecnólogo em Análise e Desenvolvimento de Sistemas</div>
         <div class="tl-who">FIAP - Aclimação · São Paulo, SP</div>
-        <div class="tl-desc">Disciplinas de programação Artificial Intelligence & Chatbot, Building Relational Database, Computational Thinking Using Python, Domain Driven Design using Java, Front-end Design Engineering, Software Engineering and Business Model.</div>
+        <div class="tl-desc">Disciplinas de programação Artificial Intelligence &amp; Chatbot, Building Relational Database, Computational Thinking Using Python, Domain Driven Design using Java, Front-end Design Engineering, Software Engineering and Business Model.</div>
       </div>
     </div>
     <div class="tl-item fade">
@@ -285,7 +156,10 @@
         <div class="tl-desc">HTML5, CSS3, JavaScript e Three.js, Banco de Dados, SQL, Python, Básico de java entre outros.</div>
       </div>
     </div>
-<!--EXPERIÊNCIA-->
+  </div>
+</div>
+
+<!-- EXPERIÊNCIA -->
 <div class="s s-alt" id="experiencia">
   <span class="s-label">💼 Experiência</span>
   <h2 class="s-title">Minha <em>Experiência</em></h2>
@@ -294,18 +168,19 @@
     <div class="tl-item fade">
       <div class="tl-date">2026 — Atual</div>
       <div class="tl-body">
-        <div class="tl-where">Prensencial · </div>
-        <div class="tl-what">Desenvolverdor Junior </div>
+        <div class="tl-where">Presencial · </div>
+        <div class="tl-what">Desenvolvedor Junior</div>
         <div class="tl-who">Brasilwagen · São Paulo, SP</div>
       </div>
     </div>
   </div>
 </div>
-<!--PROJETOS -->
+
+<!-- PROJETOS -->
 <div class="s" id="projetos">
   <span class="s-label">🚀 Projetos</span>
   <h2 class="s-title">Projetos em <em>Destaque</em></h2>
-  <p class="s-desc">O que já construí — com muita dedicação dedicação</p>
+  <p class="s-desc">O que já construí — com muita dedicação</p>
   <div class="proj-g">
     <div class="proj fade">
       <div class="proj-cover">
@@ -327,10 +202,9 @@
         <div class="tags"><span class="tag">pyautogui</span><span class="tag">time</span><span class="tag">re</span><span class="tag">PYTHON</span></div>
       </div>
     </div>
-      </div>
-    </div>
   </div>
 </div>
+
 <!-- CONTATO -->
 <section id="ctc">
   <div class="ctc-inner">
@@ -340,19 +214,19 @@
     <div class="ctc-grid fade">
       <div class="ctc-left">
         <h3>Me encontre em:</h3>
-        <a href="mailto:thiago@email.com" class="soc-link">
+        <a href="mailto:thiagodiazgomes@email.com" class="soc-link">
           <div class="soc-ico soc-em">✉</div>
           <div class="soc-info"><strong>E-mail</strong><span>thiagodiazgomes@email.com</span></div>
         </a>
-        <a href="#" class="soc-link">
+        <a href="https://github.com/douxz1" class="soc-link" target="_blank" rel="noopener noreferrer">
           <div class="soc-ico soc-gh">GH</div>
           <div class="soc-info"><strong>GitHub</strong><span>https://github.com/douxz1</span></div>
         </a>
-        <a href="#" class="soc-link">
+        <a href="https://www.linkedin.com/in/thiago-dias-a53429315/" class="soc-link" target="_blank" rel="noopener noreferrer">
           <div class="soc-ico soc-li">in</div>
           <div class="soc-info"><strong>LinkedIn</strong><span>https://www.linkedin.com/in/thiago-dias-a53429315/</span></div>
         </a>
-        <a href="#" class="soc-link">
+        <a href="https://instagram.com/thgxdz" class="soc-link" target="_blank" rel="noopener noreferrer">
           <div class="soc-ico soc-ig">ig</div>
           <div class="soc-info"><strong>Instagram</strong><span>@thgxdz</span></div>
         </a>
@@ -372,7 +246,8 @@
     </div>
   </div>
 </section>
-  <!--FOOTER-->
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <a href="#home" class="footer-brand">
@@ -393,4 +268,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
