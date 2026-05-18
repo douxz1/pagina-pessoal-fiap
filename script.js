@@ -38,8 +38,8 @@ document.querySelectorAll('.fade').forEach(el => observer.observe(el));
   const errEmail    = document.getElementById('err-email');
   const errMensagem = document.getElementById('err-mensagem');
 
-  const modal        = document.getElementById('success-modal');
-  const modalClose   = document.getElementById('modal-close');
+  const modal      = document.getElementById('success-modal');
+  const modalClose = document.getElementById('modal-close');
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -82,7 +82,6 @@ document.querySelectorAll('.fade').forEach(el => observer.observe(el));
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-
     if (!validate()) return;
 
     const dados = {
@@ -92,16 +91,16 @@ document.querySelectorAll('.fade').forEach(el => observer.observe(el));
     };
     console.log('📨 Dados do formulário a serem enviados:', dados);
 
-    modal.classList.add('show');
+    modal.style.display = 'flex';
     form.reset();
   });
 
   if (modalClose) {
-    modalClose.addEventListener('click', () => modal.classList.remove('show'));
+    modalClose.addEventListener('click', () => { modal.style.display = 'none'; });
   }
 
   modal.addEventListener('click', function (e) {
-    if (e.target === modal) modal.classList.remove('show');
+    if (e.target === modal) modal.style.display = 'none';
   });
 
   fieldNome.addEventListener('input', () => clearError(fieldNome, errNome));

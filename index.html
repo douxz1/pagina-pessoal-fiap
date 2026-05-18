@@ -68,7 +68,7 @@
 <!-- SOBRE -->
 <div class="s" id="sobre">
   <span class="s-label">👤 Sobre Mim</span>
-  <h2 class="s-title">Quem sou <em>eu</em></h2>
+  <h2 class="s-title">Minha <em>Trajetória</em></h2>
   <p class="s-desc">Um pouco da minha trajetória, motivações e o que me faz acordar animado pra codar</p>
   <div class="about-grid fade">
     <div>
@@ -233,15 +233,39 @@
       </div>
       <div class="form-wrap">
         <h3>Enviar mensagem</h3>
-        <form onsubmit="return false;">
+        <form id="contact-form" onsubmit="return false;">
           <div class="form-row2">
-            <div class="fg"><label>Nome</label><input type="text" placeholder="Thiago Dias Gomes"/></div>
-            <div class="fg"><label>E-mail</label><input type="email" placeholder="thiagodiazgomes@email.com"/></div>
+            <div class="fg">
+              <label for="field-nome">Nome</label>
+              <input id="field-nome" type="text" placeholder="Thiago Dias Gomes"/>
+              <span class="err" id="err-nome" style="display:none"></span>
+            </div>
+            <div class="fg">
+              <label for="field-email">E-mail</label>
+              <input id="field-email" type="email" placeholder="thiagodiazgomes@email.com"/>
+              <span class="err" id="err-email" style="display:none"></span>
+            </div>
           </div>
-          <div class="fg"><label>Assunto</label><input type="text" placeholder="Sobre o que você quer falar?"/></div>
-          <div class="fg"><label>Mensagem</label><textarea placeholder="Escreva sua mensagem..."></textarea></div>
+          <div class="fg">
+            <label for="field-assunto">Assunto</label>
+            <input id="field-assunto" type="text" placeholder="Sobre o que você quer falar?"/>
+          </div>
+          <div class="fg">
+            <label for="field-mensagem">Mensagem</label>
+            <textarea id="field-mensagem" placeholder="Escreva sua mensagem..."></textarea>
+            <span class="err" id="err-mensagem" style="display:none"></span>
+          </div>
           <button class="btn-send">Enviar Mensagem ✉️</button>
         </form>
+        <!-- Modal de sucesso -->
+        <div id="success-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9999;align-items:center;justify-content:center;">
+          <div style="background:#1e1e2e;border-radius:12px;padding:2rem;max-width:400px;width:90%;text-align:center;">
+            <p style="font-size:2rem;">✅</p>
+            <h3 style="color:#fff;margin:.5rem 0;">Mensagem enviada!</h3>
+            <p style="color:#aaa;">Obrigado pelo contato. Retorno em breve!</p>
+            <button id="modal-close" style="margin-top:1.2rem;padding:.6rem 1.4rem;background:#7c3aed;color:#fff;border:none;border-radius:8px;cursor:pointer;">Fechar</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -264,7 +288,6 @@
   </div>
 </footer>
 
-<!-- conector -->
 <script src="script.js"></script>
 </body>
 </html>
