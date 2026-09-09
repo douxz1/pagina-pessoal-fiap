@@ -4,266 +4,312 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Thiago Dias Gomes — Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: { DEFAULT: '#7c3aed', dark: '#4A044E', light: '#FDF4FF' },
+        },
+        fontFamily: { sans: ['Inter', 'sans-serif'] },
+      }
+    }
+  }
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
+<body class="bg-[#0a0a0f] text-white font-sans">
 
 <!-- cursor customizado -->
 <div class="cursor" id="cur"></div>
 <div class="cursor-ring" id="curRing"></div>
 
 <!-- NAV -->
-<nav>
-  <a href="#home" class="nav-brand">
-    <img src="https://ui-avatars.com/api/?background=4A044E&color=FDF4FF&name=Thiago+Dias+Gomes" alt="Logo TDG"/>
+<nav class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-12 py-4 bg-[#0a0a0f]/90 backdrop-blur border-b border-white/10">
+  <a href="#home" class="flex items-center gap-3 text-white font-bold text-lg no-underline">
+    <img src="https://ui-avatars.com/api/?background=4A044E&color=FDF4FF&name=Thiago+Dias+Gomes" alt="Logo TDG" class="w-9 h-9 rounded-full"/>
     <span>Thiago Dias Gomes</span>
   </a>
-  <ul class="nav-links">
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#habilidades">Habilidades</a></li>
-    <li><a href="#formacao">Formação</a></li>
-    <li><a href="#experiencia">Experiência</a></li>
-    <li><a href="#projetos">Projetos</a></li>
-    <li><a href="#ctc" class="nav-cta">Contato</a></li>
+  <ul class="hidden md:flex items-center gap-6 list-none m-0 p-0">
+    <li><a href="#sobre" class="text-white/70 hover:text-white transition-colors text-sm">Sobre</a></li>
+    <li><a href="#habilidades" class="text-white/70 hover:text-white transition-colors text-sm">Habilidades</a></li>
+    <li><a href="#formacao" class="text-white/70 hover:text-white transition-colors text-sm">Formação</a></li>
+    <li><a href="#experiencia" class="text-white/70 hover:text-white transition-colors text-sm">Experiência</a></li>
+    <li><a href="#projetos" class="text-white/70 hover:text-white transition-colors text-sm">Projetos</a></li>
+    <li><a href="#ctc" class="bg-[#7c3aed] hover:bg-[#6d28d9] text-white px-4 py-2 rounded-full text-sm font-semibold transition-colors">Contato</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
-<section id="home">
-  <div class="hero-bg"></div>
-  <div id="particles"></div>
-  <div class="hero-grid-dots"></div>
-  <div class="hero-inner">
-    <div class="hero-left">
-      <div class="hero-badge"><span class="hero-dot"></span>Disponível para oportunidades</div>
-      <h1>
-        <span class="name">Olá, sou</span><br/>
-        <span class="highlight">Thiago Dias<br/>Gomes</span>
+<section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+  <div id="particles" class="absolute inset-0 z-0"></div>
+  <div class="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-12">
+    <!-- left -->
+    <div class="flex-1 flex flex-col gap-6">
+      <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm w-fit">
+        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+        Disponível para oportunidades
+      </div>
+      <h1 class="text-4xl md:text-6xl font-black leading-tight">
+        <span class="text-white/60">Olá, sou</span><br/>
+        <span class="text-[#7c3aed]">Thiago Dias<br/>Gomes</span>
       </h1>
-      <p class="hero-sub">Estudante de Tecnologia apaixonado por Desenvolvimento Web, IA, e experiências 3D interativas.</p>
-      <div class="hero-btns">
-        <a href="#projetos" class="btn btn-primary">Ver Projetos →</a>
-        <a href="#ctc" class="btn btn-secondary">Entre em Contato</a>
+      <p class="text-white/60 text-lg max-w-md">Estudante de Tecnologia apaixonado por Desenvolvimento Web, IA, e experiências 3D interativas.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#projetos" class="bg-[#7c3aed] hover:bg-[#6d28d9] text-white px-6 py-3 rounded-full font-semibold transition-all hover:scale-105">Ver Projetos →</a>
+        <a href="#ctc" class="border border-white/20 hover:border-white/50 text-white px-6 py-3 rounded-full font-semibold transition-all hover:scale-105">Entre em Contato</a>
       </div>
     </div>
-    <div class="hero-right">
-      <div class="avatar-frame">
-        <div class="avatar-ring"><div class="avatar-ring-inner"></div></div>
-        <div class="avatar-img">
-          <img src="https://ui-avatars.com/api/?background=4A044E&color=FDF4FF&name=Thiago+Dias+Gomes&size=256" alt="Thiago Dias Gomes"/>
+    <!-- right -->
+    <div class="flex-shrink-0 flex items-center justify-center">
+      <div class="relative">
+        <div class="w-64 h-64 rounded-full border-2 border-[#7c3aed]/50 flex items-center justify-center">
+          <img src="https://ui-avatars.com/api/?background=4A044E&color=FDF4FF&name=Thiago+Dias+Gomes&size=256" alt="Thiago Dias Gomes" class="w-56 h-56 rounded-full object-cover"/>
         </div>
-        <div class="avatar-glow"></div>
-        <div class="hero-cards">
-          <div class="hero-chip"><span class="hero-chip-icon">🌐</span><span> Persistência  </span></div>
-          <div class="hero-chip"><span class="hero-chip-icon">🌐</span><span>Foco </span></div>
-          <div class="hero-chip"><span class="hero-chip-icon">🌐</span><span>Dedicação</span></div>
+        <div class="absolute -bottom-4 -right-4 flex flex-col gap-2">
+          <div class="bg-white/10 backdrop-blur border border-white/20 rounded-full px-3 py-1 text-xs flex items-center gap-1"><span>🌐</span> Persistência</div>
+          <div class="bg-white/10 backdrop-blur border border-white/20 rounded-full px-3 py-1 text-xs flex items-center gap-1"><span>🌐</span> Foco</div>
+          <div class="bg-white/10 backdrop-blur border border-white/20 rounded-full px-3 py-1 text-xs flex items-center gap-1"><span>🌐</span> Dedicação</div>
         </div>
       </div>
     </div>
   </div>
-  <div class="hero-scroll">Scroll<div class="scroll-line"></div></div>
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 text-xs flex flex-col items-center gap-2">
+    Scroll
+    <div class="w-px h-8 bg-gradient-to-b from-white/40 to-transparent"></div>
+  </div>
 </section>
 
 <!-- SOBRE -->
-<div class="s" id="sobre">
-  <span class="s-label">👤 Sobre Mim</span>
-  <h2 class="s-title">Minha <em>Trajetória</em></h2>
-  <p class="s-desc">Um pouco da minha trajetória, motivações e o que me faz acordar animado pra codar</p>
-  <div class="about-grid fade">
+<div class="py-24 px-6 md:px-12 max-w-6xl mx-auto" id="sobre">
+  <span class="text-[#7c3aed] text-sm font-semibold uppercase tracking-wider">👤 Sobre Mim</span>
+  <h2 class="text-3xl md:text-4xl font-black mt-2 mb-2">Minha <em class="text-[#7c3aed] not-italic">Trajetória</em></h2>
+  <p class="text-white/50 mb-10">Um pouco da minha trajetória, motivações e o que me faz acordar animado pra codar</p>
+  <div class="grid md:grid-cols-2 gap-12 items-center fade">
     <div>
-      <div class="about-text">
-        <p>Sou estudante de Analise e Desenvolvimento de Sistemas. Atualmente aprendendo em Java, desenvolvimento web moderno, interfaces 3D com Three.js e banco de dados e entre outras tecnologias.</p>
-        <p>Sempre tive grande interesse por tecnologia e programação, e desde cedo busco criar soluções para problemas reais. Atualmente, trabalho na Brasilwagen, onde estou há cerca de quatro anos. Iniciei minha trajetória como jovem aprendiz e, no ano passado, fui efetivado como desenvolvedor júnior/analista técnico.</p>
-      </div>
-      <div class="about-nums">
-        <div class="num-card"><span class="num-val">3+</span><span class="num-lbl">Projetos concluídos 🚀</span></div>
-        <div class="num-card"><span class="num-val">5+</span><span class="num-lbl">Tecnologias 🚀</span></div>
-        <div class="num-card"><span class="num-val">2+</span><span class="num-lbl">Anos estudando 🚀</span></div>
-        <div class="num-card"><span class="num-val">100%</span><span class="num-lbl">Dedicação 🚀</span></div>
+      <p class="text-white/70 mb-4">Sou estudante de Analise e Desenvolvimento de Sistemas. Atualmente aprendendo em Java, desenvolvimento web moderno, interfaces 3D com Three.js e banco de dados e entre outras tecnologias.</p>
+      <p class="text-white/70 mb-8">Sempre tive grande interesse por tecnologia e programação, e desde cedo busco criar soluções para problemas reais. Atualmente, trabalho na Brasilwagen, onde estou há cerca de quatro anos. Iniciei minha trajetória como jovem aprendiz e, no ano passado, fui efetivado como desenvolvedor júnior/analista técnico.</p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+          <span class="block text-2xl font-black text-[#7c3aed]">3+</span>
+          <span class="text-white/50 text-xs">Projetos concluídos 🚀</span>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+          <span class="block text-2xl font-black text-[#7c3aed]">5+</span>
+          <span class="text-white/50 text-xs">Tecnologias 🚀</span>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+          <span class="block text-2xl font-black text-[#7c3aed]">2+</span>
+          <span class="text-white/50 text-xs">Anos estudando 🚀</span>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+          <span class="block text-2xl font-black text-[#7c3aed]">100%</span>
+          <span class="text-white/50 text-xs">Dedicação 🚀</span>
+        </div>
       </div>
     </div>
-    <div class="about-img">
-      <img src="foto-perfil.jpg" alt="Thiago Dias Gomes" />
+    <div class="flex justify-center">
+      <img src="foto-perfil.jpg" alt="Thiago Dias Gomes" class="w-72 h-80 object-cover rounded-2xl border border-white/10"/>
     </div>
   </div>
 </div>
 
-<!--  OBJETIVO -->
-<div class="obj-wrap">
-  <div class="obj-card fade">
-    <span class="s-label">🎯 Objetivo</span>
-    <h2 class="s-title">Objetivo Profissional</h2>
-    <p>Meu objetivo é sempre continuar aprendendo e melhorando minhas habilidades. Quero ser um profissional reconhecido entre os melhores por minha dedicação e compromisso.</p>
+<!-- OBJETIVO -->
+<div class="py-12 px-6 md:px-12">
+  <div class="max-w-3xl mx-auto bg-gradient-to-br from-[#7c3aed]/20 to-[#4A044E]/20 border border-[#7c3aed]/30 rounded-2xl p-8 text-center fade">
+    <span class="text-[#7c3aed] text-sm font-semibold uppercase tracking-wider">🎯 Objetivo</span>
+    <h2 class="text-3xl font-black mt-2 mb-4">Objetivo Profissional</h2>
+    <p class="text-white/70">Meu objetivo é sempre continuar aprendendo e melhorando minhas habilidades. Quero ser um profissional reconhecido entre os melhores por minha dedicação e compromisso.</p>
   </div>
 </div>
 
 <!-- HABILIDADES -->
-<div class="s s-alt" id="habilidades">
-  <span class="s-label">⚡ Skills</span>
-  <h2 class="s-title">Minhas <em>Habilidades</em></h2>
-  <p class="s-desc">Tecnologias e competências que estudo e aplico no dia a dia</p>
-  <div class="tabs">
-    <button class="tab-btn on" onclick="showTab(this,'hard')">Hard Skills</button>
-    <button class="tab-btn" onclick="showTab(this,'soft')">Soft Skills</button>
-    <button class="tab-btn" onclick="showTab(this,'tech')">Tecnologias</button>
+<div class="py-24 px-6 md:px-12 max-w-6xl mx-auto bg-white/[0.02] rounded-3xl" id="habilidades">
+  <span class="text-[#7c3aed] text-sm font-semibold uppercase tracking-wider">⚡ Skills</span>
+  <h2 class="text-3xl md:text-4xl font-black mt-2 mb-2">Minhas <em class="text-[#7c3aed] not-italic">Habilidades</em></h2>
+  <p class="text-white/50 mb-8">Tecnologias e competências que estudo e aplico no dia a dia</p>
+  <div class="flex gap-2 mb-8">
+    <button class="tab-btn on px-5 py-2 rounded-full text-sm font-semibold border border-[#7c3aed] bg-[#7c3aed] text-white transition-all" onclick="showTab(this,'hard')">Hard Skills</button>
+    <button class="tab-btn px-5 py-2 rounded-full text-sm font-semibold border border-white/20 text-white/60 transition-all hover:border-white/40" onclick="showTab(this,'soft')">Soft Skills</button>
+    <button class="tab-btn px-5 py-2 rounded-full text-sm font-semibold border border-white/20 text-white/60 transition-all hover:border-white/40" onclick="showTab(this,'tech')">Tecnologias</button>
   </div>
-  <div id="hard" class="skills-g">
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Programação em Java</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">HTML, CSS, JavaScript</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Banco de Dados (SQL/PL/SQL)</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Git e GitHub</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Estruturas de Dados</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Orientação a Objetos (POO)</span></div>
+  <div id="hard" class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div class="sk flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 fade"><span class="text-[#7c3aed] font-bold">✓</span><span>Programação em Java</span></div>
+    <div class="sk flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 fade"><span class="text-[#7c3aed] font-bold">✓</span><span>HTML, CSS, JavaScript</span></div>
+    <div class="sk flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 fade"><span class="text-[#7c3aed] font-bold">✓</span><span>Banco de Dados (SQL/PL/SQL)</span></div>
+    <div class="sk flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 fade"><span class="text-[#7c3aed] font-bold">✓</span><span>Git e GitHub</span></div>
+    <div class="sk flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 fade"><span class="text-[#7c3aed] font-bold">✓</span><span>Estruturas de Dados</span></div>
+    <div class="sk flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 fade"><span class="text-[#7c3aed] font-bold">✓</span><span>Orientação a Objetos (POO)</span></div>
   </div>
-  <div id="soft" class="skills-g" style="display:none">
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Trabalho em Equipe</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Comunicação Efetiva</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Resolução de Problemas</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Adaptabilidade</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Pensamento Crítico</span></div>
+  <div id="soft" class="grid grid-cols-2 md:grid-cols-3 gap-4" style="display:none">
+    <div class="sk flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 fade"><span class="text-[#7c3aed] font-bold">✓</span><span>Trabalho em Equipe</span></div>
+    <div class="sk flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 fade"><span class="text-[#7c3aed] font-bold">✓</span><span>Comunicação Efetiva</span></div>
+    <div class="sk flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 fade"><span class="text-[#7c3aed] font-bold">✓</span><span>Resolução de Problemas</span></div>
+    <div class="sk flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 fade"><span class="text-[#7c3aed] font-bold">✓</span><span>Adaptabilidade</span></div>
+    <div class="sk flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 fade"><span class="text-[#7c3aed] font-bold">✓</span><span>Pensamento Crítico</span></div>
   </div>
-  <div id="tech" class="skills-g" style="display:none">
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Three.js / WebGL</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Node.js</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">MySQL </span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">IntelliJ IDEA / VS Code</span></div>
-    <div class="sk fade"><span class="sk-check">✓</span><span class="sk-name">Linux / Windows</span></div>
+  <div id="tech" class="grid grid-cols-2 md:grid-cols-3 gap-4" style="display:none">
+    <div class="sk flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 fade"><span class="text-[#7c3aed] font-bold">✓</span><span>Three.js / WebGL</span></div>
+    <div class="sk flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 fade"><span class="text-[#7c3aed] font-bold">✓</span><span>Node.js</span></div>
+    <div class="sk flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 fade"><span class="text-[#7c3aed] font-bold">✓</span><span>MySQL</span></div>
+    <div class="sk flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 fade"><span class="text-[#7c3aed] font-bold">✓</span><span>IntelliJ IDEA / VS Code</span></div>
+    <div class="sk flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 fade"><span class="text-[#7c3aed] font-bold">✓</span><span>Linux / Windows</span></div>
   </div>
 </div>
 
 <!-- FORMAÇÃO -->
-<div class="s" id="formacao">
-  <span class="s-label">🎓 Formação</span>
-  <h2 class="s-title">Minha <em>Formação</em></h2>
-  <p class="s-desc">Educação e cursos que moldaram minha visão técnica</p>
-  <div class="tl">
-    <div class="tl-item fade">
-      <div class="tl-date">2026 — Atual</div>
-      <div class="tl-body">
-        <div class="tl-where">Graduação · Presencial</div>
-        <div class="tl-what">Tecnólogo em Análise e Desenvolvimento de Sistemas</div>
-        <div class="tl-who">FIAP - Aclimação · São Paulo, SP</div>
-        <div class="tl-desc">Disciplinas de programação Artificial Intelligence &amp; Chatbot, Building Relational Database, Computational Thinking Using Python, Domain Driven Design using Java, Front-end Design Engineering, Software Engineering and Business Model.</div>
+<div class="py-24 px-6 md:px-12 max-w-6xl mx-auto" id="formacao">
+  <span class="text-[#7c3aed] text-sm font-semibold uppercase tracking-wider">🎓 Formação</span>
+  <h2 class="text-3xl md:text-4xl font-black mt-2 mb-2">Minha <em class="text-[#7c3aed] not-italic">Formação</em></h2>
+  <p class="text-white/50 mb-10">Educação e cursos que moldaram minha visão técnica</p>
+  <div class="flex flex-col gap-8">
+    <div class="flex gap-6 fade">
+      <div class="flex flex-col items-center">
+        <div class="w-3 h-3 rounded-full bg-[#7c3aed] mt-1"></div>
+        <div class="flex-1 w-px bg-white/10 mt-2"></div>
+      </div>
+      <div class="pb-8">
+        <span class="text-[#7c3aed] text-sm font-semibold">2026 — Atual</span>
+        <p class="text-white/50 text-xs uppercase tracking-wider mt-1">Graduação · Presencial</p>
+        <h3 class="font-bold text-lg mt-1">Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
+        <p class="text-[#7c3aed] text-sm">FIAP - Aclimação · São Paulo, SP</p>
+        <p class="text-white/60 text-sm mt-2">Disciplinas de programação Artificial Intelligence &amp; Chatbot, Building Relational Database, Computational Thinking Using Python, Domain Driven Design using Java, Front-end Design Engineering, Software Engineering and Business Model.</p>
       </div>
     </div>
-    <div class="tl-item fade">
-      <div class="tl-date">2024/2025</div>
-      <div class="tl-body">
-        <div class="tl-where">Curso · Online</div>
-        <div class="tl-what">Diversos cursos</div>
-        <div class="tl-who">Plataforma Online</div>
-        <div class="tl-desc">HTML5, CSS3, JavaScript e Three.js, Banco de Dados, SQL, Python, Básico de java entre outros.</div>
+    <div class="flex gap-6 fade">
+      <div class="flex flex-col items-center">
+        <div class="w-3 h-3 rounded-full bg-[#7c3aed] mt-1"></div>
+      </div>
+      <div>
+        <span class="text-[#7c3aed] text-sm font-semibold">2024/2025</span>
+        <p class="text-white/50 text-xs uppercase tracking-wider mt-1">Curso · Online</p>
+        <h3 class="font-bold text-lg mt-1">Diversos cursos</h3>
+        <p class="text-[#7c3aed] text-sm">Plataforma Online</p>
+        <p class="text-white/60 text-sm mt-2">HTML5, CSS3, JavaScript e Three.js, Banco de Dados, SQL, Python, Básico de java entre outros.</p>
       </div>
     </div>
   </div>
 </div>
 
 <!-- EXPERIÊNCIA -->
-<div class="s s-alt" id="experiencia">
-  <span class="s-label">💼 Experiência</span>
-  <h2 class="s-title">Minha <em>Experiência</em></h2>
-  <p class="s-desc">Projetos e atuações que construíram meu caminho</p>
-  <div class="tl">
-    <div class="tl-item fade">
-      <div class="tl-date">2026 — Atual</div>
-      <div class="tl-body">
-        <div class="tl-where">Presencial · </div>
-        <div class="tl-what">Desenvolvedor Junior</div>
-        <div class="tl-who">Brasilwagen · São Paulo, SP</div>
-      </div>
+<div class="py-24 px-6 md:px-12 max-w-6xl mx-auto bg-white/[0.02] rounded-3xl" id="experiencia">
+  <span class="text-[#7c3aed] text-sm font-semibold uppercase tracking-wider">💼 Experiência</span>
+  <h2 class="text-3xl md:text-4xl font-black mt-2 mb-2">Minha <em class="text-[#7c3aed] not-italic">Experiência</em></h2>
+  <p class="text-white/50 mb-10">Projetos e atuações que construíram meu caminho</p>
+  <div class="flex gap-6 fade">
+    <div class="flex flex-col items-center">
+      <div class="w-3 h-3 rounded-full bg-[#7c3aed] mt-1"></div>
+    </div>
+    <div>
+      <span class="text-[#7c3aed] text-sm font-semibold">2026 — Atual</span>
+      <p class="text-white/50 text-xs uppercase tracking-wider mt-1">Presencial</p>
+      <h3 class="font-bold text-lg mt-1">Desenvolvedor Junior</h3>
+      <p class="text-[#7c3aed] text-sm">Brasilwagen · São Paulo, SP</p>
     </div>
   </div>
 </div>
 
 <!-- PROJETOS -->
-<div class="s" id="projetos">
-  <span class="s-label">🚀 Projetos</span>
-  <h2 class="s-title">Projetos em <em>Destaque</em></h2>
-  <p class="s-desc">O que já construí — com muita dedicação</p>
-  <div class="proj-g">
-    <div class="proj fade">
-      <div class="proj-cover">
-        <span class="proj-ico">🌐</span>
-        <h3>Website 3D Interativo</h3>
+<div class="py-24 px-6 md:px-12 max-w-6xl mx-auto" id="projetos">
+  <span class="text-[#7c3aed] text-sm font-semibold uppercase tracking-wider">🚀 Projetos</span>
+  <h2 class="text-3xl md:text-4xl font-black mt-2 mb-2">Projetos em <em class="text-[#7c3aed] not-italic">Destaque</em></h2>
+  <p class="text-white/50 mb-10">O que já construí — com muita dedicação</p>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="proj bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-[#7c3aed]/50 transition-all hover:-translate-y-1 fade">
+      <div class="bg-gradient-to-br from-[#7c3aed]/30 to-[#4A044E]/30 p-8 flex items-center gap-4">
+        <span class="text-4xl">🌐</span>
+        <h3 class="font-bold text-xl">Website 3D Interativo</h3>
       </div>
-      <div class="proj-body">
-        <p>Website moderno com cenas 3D interativas usando Three.js. Animações fluidas, design responsivo e experiência imersiva.</p>
-        <div class="tags"><span class="tag">Three.js</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+      <div class="p-6">
+        <p class="text-white/60 mb-4">Website moderno com cenas 3D interativas usando Three.js. Animações fluidas, design responsivo e experiência imersiva.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-[#7c3aed]/20 text-[#a78bfa] text-xs px-3 py-1 rounded-full">Three.js</span>
+          <span class="bg-[#7c3aed]/20 text-[#a78bfa] text-xs px-3 py-1 rounded-full">HTML</span>
+          <span class="bg-[#7c3aed]/20 text-[#a78bfa] text-xs px-3 py-1 rounded-full">CSS</span>
+          <span class="bg-[#7c3aed]/20 text-[#a78bfa] text-xs px-3 py-1 rounded-full">JavaScript</span>
+        </div>
       </div>
     </div>
-    <div class="proj fade">
-      <div class="proj-cover">
-        <span class="proj-ico">⚙️</span>
-        <h3>Cadastro de Usuários</h3>
+    <div class="proj bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-[#7c3aed]/50 transition-all hover:-translate-y-1 fade">
+      <div class="bg-gradient-to-br from-[#7c3aed]/30 to-[#4A044E]/30 p-8 flex items-center gap-4">
+        <span class="text-4xl">⚙️</span>
+        <h3 class="font-bold text-xl">Cadastro de Usuários</h3>
       </div>
-      <div class="proj-body">
-        <p>Automação para cadastros de usuários dentro do sistema.</p>
-        <div class="tags"><span class="tag">pyautogui</span><span class="tag">time</span><span class="tag">re</span><span class="tag">PYTHON</span></div>
+      <div class="p-6">
+        <p class="text-white/60 mb-4">Automação para cadastros de usuários dentro do sistema.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-[#7c3aed]/20 text-[#a78bfa] text-xs px-3 py-1 rounded-full">pyautogui</span>
+          <span class="bg-[#7c3aed]/20 text-[#a78bfa] text-xs px-3 py-1 rounded-full">time</span>
+          <span class="bg-[#7c3aed]/20 text-[#a78bfa] text-xs px-3 py-1 rounded-full">re</span>
+          <span class="bg-[#7c3aed]/20 text-[#a78bfa] text-xs px-3 py-1 rounded-full">PYTHON</span>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <!-- CONTATO -->
-<section id="ctc">
-  <div class="ctc-inner">
-    <span class="s-label">📬 Contato</span>
-    <h2 class="s-title">Vamos <em>conversar</em></h2>
-    <p class="s-desc">Aberto a oportunidades e projetos</p>
-    <div class="ctc-grid fade">
-      <div class="ctc-left">
-        <h3>Me encontre em:</h3>
-        <a href="mailto:thiagodiazgomes@email.com" class="soc-link">
-          <div class="soc-ico soc-em">✉</div>
-          <div class="soc-info"><strong>E-mail</strong><span>thiagodiazgomes@email.com</span></div>
-        </a>
-        <a href="https://github.com/douxz1" class="soc-link" target="_blank" rel="noopener noreferrer">
-          <div class="soc-ico soc-gh">GH</div>
-          <div class="soc-info"><strong>GitHub</strong><span>https://github.com/douxz1</span></div>
-        </a>
-        <a href="https://www.linkedin.com/in/thiago-dias-a53429315/" class="soc-link" target="_blank" rel="noopener noreferrer">
-          <div class="soc-ico soc-li">in</div>
-          <div class="soc-info"><strong>LinkedIn</strong><span>https://www.linkedin.com/in/thiago-dias-a53429315/</span></div>
-        </a>
-        <a href="https://instagram.com/thgxdz" class="soc-link" target="_blank" rel="noopener noreferrer">
-          <div class="soc-ico soc-ig">ig</div>
-          <div class="soc-info"><strong>Instagram</strong><span>@thgxdz</span></div>
-        </a>
+<section id="ctc" class="py-24 px-6 md:px-12 bg-gradient-to-b from-transparent to-[#4A044E]/10">
+  <div class="max-w-6xl mx-auto">
+    <span class="text-[#7c3aed] text-sm font-semibold uppercase tracking-wider">📬 Contato</span>
+    <h2 class="text-3xl md:text-4xl font-black mt-2 mb-2">Vamos <em class="text-[#7c3aed] not-italic">conversar</em></h2>
+    <p class="text-white/50 mb-10">Aberto a oportunidades e projetos</p>
+    <div class="grid md:grid-cols-2 gap-12 fade">
+      <div>
+        <h3 class="font-bold text-lg mb-6">Me encontre em:</h3>
+        <div class="flex flex-col gap-4">
+          <a href="mailto:thiagodiazgomes@email.com" class="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl p-4 hover:border-[#7c3aed]/50 transition-all no-underline">
+            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center font-bold">✉</div>
+            <div><strong class="block text-sm">E-mail</strong><span class="text-white/50 text-xs">thiagodiazgomes@email.com</span></div>
+          </a>
+          <a href="https://github.com/douxz1" class="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl p-4 hover:border-[#7c3aed]/50 transition-all no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center font-bold text-sm">GH</div>
+            <div><strong class="block text-sm">GitHub</strong><span class="text-white/50 text-xs">https://github.com/douxz1</span></div>
+          </a>
+          <a href="https://www.linkedin.com/in/thiago-dias-a53429315/" class="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl p-4 hover:border-[#7c3aed]/50 transition-all no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="w-10 h-10 bg-[#0077b5]/30 rounded-lg flex items-center justify-center font-bold text-sm">in</div>
+            <div><strong class="block text-sm">LinkedIn</strong><span class="text-white/50 text-xs">https://www.linkedin.com/in/thiago-dias-a53429315/</span></div>
+          </a>
+          <a href="https://instagram.com/thgxdz" class="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl p-4 hover:border-[#7c3aed]/50 transition-all no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="w-10 h-10 bg-gradient-to-br from-pink-500/30 to-purple-500/30 rounded-lg flex items-center justify-center font-bold text-sm">ig</div>
+            <div><strong class="block text-sm">Instagram</strong><span class="text-white/50 text-xs">@thgxdz</span></div>
+          </a>
+        </div>
       </div>
-      <div class="form-wrap">
-        <h3>Enviar mensagem</h3>
-        <form id="contact-form" onsubmit="return false;">
-          <div class="form-row2">
-            <div class="fg">
-              <label for="field-nome">Nome</label>
-              <input id="field-nome" type="text" placeholder="Thiago Dias Gomes"/>
-              <span class="err" id="err-nome" style="display:none"></span>
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
+        <h3 class="font-bold text-lg mb-6">Enviar mensagem</h3>
+        <form id="contact-form" onsubmit="return false;" class="flex flex-col gap-4">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex flex-col gap-1">
+              <label for="field-nome" class="text-sm text-white/70">Nome</label>
+              <input id="field-nome" type="text" placeholder="Thiago Dias Gomes" class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#7c3aed] transition-colors"/>
+              <span class="err text-red-400 text-xs" id="err-nome" style="display:none"></span>
             </div>
-            <div class="fg">
-              <label for="field-email">E-mail</label>
-              <input id="field-email" type="email" placeholder="thiagodiazgomes@email.com"/>
-              <span class="err" id="err-email" style="display:none"></span>
+            <div class="flex flex-col gap-1">
+              <label for="field-email" class="text-sm text-white/70">E-mail</label>
+              <input id="field-email" type="email" placeholder="thiagodiazgomes@email.com" class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#7c3aed] transition-colors"/>
+              <span class="err text-red-400 text-xs" id="err-email" style="display:none"></span>
             </div>
           </div>
-          <div class="fg">
-            <label for="field-assunto">Assunto</label>
-            <input id="field-assunto" type="text" placeholder="Sobre o que você quer falar?"/>
+          <div class="flex flex-col gap-1">
+            <label for="field-assunto" class="text-sm text-white/70">Assunto</label>
+            <input id="field-assunto" type="text" placeholder="Sobre o que você quer falar?" class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#7c3aed] transition-colors"/>
           </div>
-          <div class="fg">
-            <label for="field-mensagem">Mensagem</label>
-            <textarea id="field-mensagem" placeholder="Escreva sua mensagem..."></textarea>
-            <span class="err" id="err-mensagem" style="display:none"></span>
+          <div class="flex flex-col gap-1">
+            <label for="field-mensagem" class="text-sm text-white/70">Mensagem</label>
+            <textarea id="field-mensagem" placeholder="Escreva sua mensagem..." class="bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#7c3aed] transition-colors h-32 resize-none"></textarea>
+            <span class="err text-red-400 text-xs" id="err-mensagem" style="display:none"></span>
           </div>
-          <button class="btn-send">Enviar Mensagem ✉️</button>
+          <button class="bg-[#7c3aed] hover:bg-[#6d28d9] text-white py-3 rounded-xl font-semibold transition-all hover:scale-[1.02]">Enviar Mensagem ✉️</button>
         </form>
-        <!-- Modal de sucesso -->
         <div id="success-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9999;align-items:center;justify-content:center;">
-          <div style="background:#1e1e2e;border-radius:12px;padding:2rem;max-width:400px;width:90%;text-align:center;">
-            <p style="font-size:2rem;">✅</p>
-            <h3 style="color:#fff;margin:.5rem 0;">Mensagem enviada!</h3>
-            <p style="color:#aaa;">Obrigado pelo contato. Retorno em breve!</p>
-            <button id="modal-close" style="margin-top:1.2rem;padding:.6rem 1.4rem;background:#7c3aed;color:#fff;border:none;border-radius:8px;cursor:pointer;">Fechar</button>
+          <div class="bg-[#1e1e2e] rounded-2xl p-8 max-w-sm w-11/12 text-center">
+            <p class="text-4xl">✅</p>
+            <h3 class="text-white font-bold text-xl mt-2 mb-1">Mensagem enviada!</h3>
+            <p class="text-white/50 text-sm">Obrigado pelo contato. Retorno em breve!</p>
+            <button id="modal-close" class="mt-5 bg-[#7c3aed] hover:bg-[#6d28d9] text-white px-6 py-2 rounded-full font-semibold transition-colors">Fechar</button>
           </div>
         </div>
       </div>
@@ -272,19 +318,19 @@
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <a href="#home" class="footer-brand">
-      <img src="https://ui-avatars.com/api/?background=4A044E&color=FDF4FF&name=Thiago+Dias+Gomes" alt="Logo"/>
+<footer class="border-t border-white/10 py-8 px-6 md:px-12">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <a href="#home" class="flex items-center gap-3 no-underline text-white font-bold">
+      <img src="https://ui-avatars.com/api/?background=4A044E&color=FDF4FF&name=Thiago+Dias+Gomes" alt="Logo" class="w-8 h-8 rounded-full"/>
       <span>Thiago Dias Gomes</span>
     </a>
-    <div class="footer-links">
-      <a href="#sobre">Sobre</a>
-      <a href="#habilidades">Habilidades</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#ctc">Contato</a>
+    <div class="flex gap-6">
+      <a href="#sobre" class="text-white/50 hover:text-white text-sm transition-colors">Sobre</a>
+      <a href="#habilidades" class="text-white/50 hover:text-white text-sm transition-colors">Habilidades</a>
+      <a href="#projetos" class="text-white/50 hover:text-white text-sm transition-colors">Projetos</a>
+      <a href="#ctc" class="text-white/50 hover:text-white text-sm transition-colors">Contato</a>
     </div>
-    <p class="footer-copy">© 2026 <span>Thiago Dias Gomes</span> · Feito com dedicação ☕</p>
+    <p class="text-white/30 text-sm">© 2026 <span class="text-white/60">Thiago Dias Gomes</span> · Feito com dedicação ☕</p>
   </div>
 </footer>
 
